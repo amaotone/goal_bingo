@@ -21,11 +21,11 @@ class BingoCellWidget extends StatelessWidget {
   final VoidCallback onLongPress;
 
   const BingoCellWidget({
-    Key? key,
+    super.key,
     required this.cell,
     required this.onTap,
     required this.onLongPress,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
