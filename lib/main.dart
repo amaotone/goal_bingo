@@ -7,7 +7,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,10 +16,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           surface: Colors.white,
-          seedColor: Color(0xFF97D3E3),
-          primary: Color(0xFF97D3E3),
-          secondary: Color(0xFF91DBB9),
-          tertiary: Color(0xFFECACB5),
+          seedColor: const Color(0xFF97D3E3),
+          primary: const Color.fromARGB(255, 72, 76, 77),
+          secondary: const Color(0xFF91DBB9),
+          tertiary: const Color(0xFFECACB5),
         ),
         textTheme: GoogleFonts.mPlusRounded1cTextTheme(
           Theme.of(context).textTheme,
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({super.key, required this.title});
 
   final String title;
 
@@ -40,7 +40,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: ConstrainedBox(
-        constraints: BoxConstraints(
+        constraints: const BoxConstraints(
           maxWidth: 500,
           maxHeight: 500,
         ),
@@ -54,10 +54,10 @@ class MyHomePage extends StatelessWidget {
 }
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
-  _HomePageState createState() => _HomePageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
